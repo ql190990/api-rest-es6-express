@@ -14,9 +14,9 @@ import {options} from './encryption/certificates/certificate';
 let app = express();
 
 ///Server Http
-// app.server = http.createServer(app);
+app.server = http.createServer(app);
 ///Server Https
-app.server = https.createServer(options,app);
+// app.server = https.createServer(options,app);
 
 // logger
 app.use(morgan('dev'));
